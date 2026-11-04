@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h3>PAPER KIT 2 PRO</h3>
+
+        <div class="nav-links">
+            <a href="#">DOCUMENTATION</a>
+            <a href="#">COMPONENTS</a>
+            <a href="#">SECTIONS</a>
+            <a href="#">EXAMPLES</a>
+            <a href="#" class="buy-btn">🛒 BUY NOW</a>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <main class="form-container">
+        <h1>Create Your Account</h1>
+        <p class="subtitle">Join us and get started today</p>
+
+        <form>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password"
+                   placeholder="Create a password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password"
+                   placeholder="Confirm your password" required>
+
+            <label>Gender</label>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+
+            <label for="country">Country</label>
+            <select id="country" required>
+                <option value="">Select your country</option>
+                <option value="India">India</option>
+                <option value="USA">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Australia">Australia</option>
+            </select>
+
+            <label class="terms">
+                <input type="checkbox" required>
+                <span>
+                    I agree to the
+                    <a href="#">Terms of Service</a> and
+                    <a href="#">Privacy Policy</a>
+                </span>
+            </label>
+
+            <button type="submit">REGISTER NOW</button>
+        </form>
+
+        <p class="login">
+            Already have an account? <a href="#">LOGIN</a>
+        </p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2019, MADE WITH ❤️ BY CREATIVE TIM
+    </footer>
+
+</body>
+</html>
