@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="student-form">
+        <h2>Student registration</h2>
+
+        <label for="studentname">Name:</label>
+        <input type="text" name="studentname" id="studentname" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter password">
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="others" name="gender" value="other">
+        <label for="others">Other</label>
+        <br><br>
+
+        <label>Skills:</label>
+        <input type="checkbox" id="java" name="skills" value="Java">
+        <label for="java">Java</label>
+        <input type="checkbox" id="sql" name="Skills" value="SQL">
+        <label for="sql">SQL</label>
+        <input type="checkbox" id="html" name="Skills" value="HTML">
+        <label for="html">HTML</label>
+        <br><br>
+
+        <label for="course">select Course:</label>
+        <select name="course" id="course">
+            <option value="" selected disabled>Select your course</option>
+            <option value="JAVA">Java</option>
+            <option value="Python">Python</option>
+            <option value="SQL">SQL</option>
+            <option value="HTML">HTML</option>
+            <option value="javascript">javascript</option>
+        </select>
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your Address"></textarea>
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+  
+</body>
+</html>

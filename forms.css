@@ -1,0 +1,29 @@
+body{
+    background-color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.student-form{
+  background-color: white;
+  width:400px;
+  padding:25px;
+  border-radius:10px;
+  box-shadow: 0 0 10px gray;
+}
+h2{
+    color: darkblue;
+    text-align: center;
+    font-size: 26px;
+}
+input[type="email"],input[type="password"],input[type="text"]{
+    padding:10px;
+    width: 85%;
+}
+input[type="email"],input[type="text"],input[type="date"]{
+     width: 90%;
+}
