@@ -1,89 +1,1212 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Account</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" href="./assests/favicon.png?v=2">
+    
+    <style>
+    .navbar-brand {
+        color: #2563eb;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .navbar-brand:hover {
+        color: #1d4ed8;
+    }
+    .nav-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+    }
+  
+    .nav-link {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 15px;
+    }
+    .nav-link:hover {
+        color: #2563eb;
+        text-decoration: underline;
+    }
+    .menu {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 8px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item {
+        display: block;
+        padding: 8px 16px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .menu-item:hover {
+        background-color: #f1f5f9;
+        color: #2563eb;
+    }
+
+    .menu-divider {
+        margin: 6px 0;
+        border-color: #e5e7eb;
+    }
+    .nav-item {
+    position: relative;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 180px;
+        z-index: 1000;
+    }
+    .category-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    }
+
+    .category-btn i {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+    form[role="search"] {
+    max-width: 350px;
+    width: 100%;
+    }
+
+    form[role="search"] .form-control {
+        border-radius: 20px;
+        padding: 10px 16px;
+        border: 1px solid #d1d5db;
+    }
+
+    form[role="search"] .form-control:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+    .search-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    }
+
+    .search-btn:hover {
+        background-color: #1d4ed8;
+    }
+    .search-btn i {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+   
+    form[role="search"] button:hover {
+        background-color: #1d4ed8;
+    }
+    .d-flex.gap-3 .nav-link {
+    color: #333;
+    font-size: 20px;
+    padding: 8px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    }
+
+    .d-flex.gap-3 .nav-link:hover {
+        color: #2563eb;
+    }.shop-navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    }
+
+    .shop-navbar .drawer-body {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        gap: 25px;
+    }
+
+    .shop-navbar .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .shop-navbar form {
+        margin-left: auto;
+    }
+    .hero-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+    }
+
+    .hero-section > div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hero-section img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        object-position: right center;
+    }
+    .category-card {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    }
+    .category-card h5 {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    }
+    .categories-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .categories-section .col-md-3 {
+        width: 25%;
+    }
+
+    .category-card {
+        width: 100%;
+    }
+    .category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(84, 20, 224, 0.1);
+    }
+    .hero-section h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 20px;
+    }
+    .hero-banner {
+    background: #e9eaff;
+    border-radius: 16px;
+    padding: 35px 40px;
+    margin: 25px 0;
+    }
+    .hero-banner img {
+    border-radius: 12px;
+    }
+
+    .hero-section p {
+        line-height: 1.7;
+    }
+
+    .category-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .shop-navbar {
+    z-index: 1030;
+    }
+    .hero-btn {
+    transition: all 0.3s ease;
+    }
+
+    /* Shop Now hover */
+    .hero-btn.btn-primary:hover {
+        background-color: #2563eb;
+        border-color: #2563eb;
+        transform: translateY(-3px);
+        color: white;
+    }
+
+    /* Explore Deals hover */
+    .hero-btn.btn-outline-primary:hover {
+        background-color: #2563eb;
+        color: white;
+        border-color: #2563eb;
+        transform: translateY(-3px);
+    }
+    .services-section {
+    padding: 30px 0;
+    background-color: #f8fafc;
+    }
+
+    .service-card {
+        text-align: center;
+        padding: 25px 15px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card i {
+        font-size: 32px;
+        color: #2563eb;
+        margin-bottom: 12px;
+    }
+
+    .service-card h5 {
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .service-card p {
+        color: #64748b;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+    .services-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .services-section .col-md-3 {
+        flex: 0 0 25%;
+        width: 25%;
+    }
+    @media (max-width: 768px) {
+        .services-section .col-md-3 {
+            flex: 0 0 50%;
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .services-section .col-md-3 {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+    }
+    .kitchen-link,
+    .kitchen-link:visited {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .kitchen-link:hover {
+        color: #2563eb;
+        text-decoration: none;
+    }
+
+    .kitchen-link h5 {
+        color: inherit;
+    }
+
+    .kitchen-link:hover h5 {
+        color: #2563eb;
+    }
+
+    /* Featured Products Section */
+
+    .featured-section {
+        padding: 55px 0;
+        background-color: #f8fafc;
+    }
+
+    .featured-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .featured-heading h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    .featured-heading p {
+        color: #64748b;
+        margin-bottom: 0;
+    }
+
+    .view-all-btn {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .view-all-btn:hover {
+        color: #1d4ed8;
+    }
+
+    /* Product Card */
+
+    .featured-card {
+        background-color: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        overflow: hidden;
+        height: 100%;
+        transition: 0.3s ease;
+    }
+
+    .featured-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
+    }
+
+    /* Product Image */
+
+    .featured-image {
+    position: relative;
+    background-color: #eef2ff;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    }
+
+    .featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    transition: transform 0.3s ease;
+    }
+    .featured-product-image {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8fc;
+    overflow: hidden;
+    }
+
+    .featured-product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 12px;
+    }
+
+    .featured-card:hover .featured-image img {
+        transform: scale(1.04);
+    }
+
+    /* Product Badge */
+
+    .product-badge {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        z-index: 1;
+        background-color: #2563eb;
+        color: white;
+        padding: 5px 9px;
+        border-radius: 5px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    /* Wishlist */
+
+    .wishlist-icon {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        z-index: 1;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+        color: #333;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .wishlist-icon:hover {
+        color: #e11d48;
+    }
+
+    /* Product Details */
+
+    .featured-details {
+        padding: 16px;
+    }
+
+    .product-category {
+        color: #64748b;
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .featured-details h5 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0f172a;
+        min-height: 38px;
+    }
+
+    .product-rating {
+        color: #f59e0b;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .product-rating span {
+        color: #64748b;
+    }
+
+    .product-price {
+        color: #2563eb;
+        font-size: 19px;
+        font-weight: 700;
+    }
+
+    .product-price del {
+        color: #94a3b8;
+        font-size: 13px;
+        font-weight: 400;
+        margin-left: 5px;
+    }
+
+    /* Add to Cart */
+
+    .featured-cart-btn {
+        width: 100%;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        padding: 10px;
+        margin-top: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .featured-cart-btn:hover {
+        background-color: #1d4ed8;
+    }
+
+    /* Mobile Responsive */
+
+    @media (max-width: 576px) {
+        .featured-heading h2 {
+            font-size: 23px;
+        }
+
+        .featured-image img {
+            height: 145px;
+        }
+
+        .featured-details {
+            padding: 10px;
+        }
+
+        .featured-details h5 {
+            font-size: 14px;
+        }
+
+        .product-price {
+            font-size: 16px;
+        }
+    }
+
+    /* Footer Section */
+
+    .shop-footer {
+        background-color: #0f172a;
+        color: #ffffff;
+        padding: 55px 0 20px;
+        margin-top: 40px;
+    }
+
+    .footer-brand {
+        color: #60a5fa;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .footer-text {
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .footer-title {
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 11px;
+    }
+
+    .footer-links a {
+        color: #cbd5e1;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #60a5fa;
+        padding-left: 4px;
+    }
+
+    .footer-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        margin-right: 7px;
+        border-radius: 50%;
+        background-color: #1e293b;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .footer-social a:hover {
+        background-color: #2563eb;
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .newsletter-form input {
+        min-width: 0;
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #475569;
+        border-radius: 6px;
+        background-color: #1e293b;
+        color: white;
+    }
+
+    .newsletter-form input::placeholder {
+        color: #cbd5e1;
+    }
+
+    .newsletter-form button {
+        padding: 10px 14px;
+        border: none;
+        border-radius: 6px;
+        background-color: #2563eb;
+        color: white;
+        font-weight: 600;
+    }
+
+    .newsletter-form button:hover {
+        background-color: #1d4ed8;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #334155;
+        margin-top: 35px;
+        padding-top: 20px;
+    }
+
+    .payment-methods span {
+        display: inline-block;
+        background-color: white;
+        color: #0f172a;
+        padding: 5px 9px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 3px;
+    }
+
+    @media (max-width: 576px) {
+        .shop-footer {
+            padding: 40px 15px 20px;
+        }
+
+        .newsletter-form {
+            flex-wrap: wrap;
+        }
+    }
+        .shop-footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .shop-footer .row > div {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    @media (max-width: 768px) {
+        .shop-footer .row > div {
+            flex: 0 0 50%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .shop-footer .row > div {
+            flex: 0 0 100%;
+        }
+    }
+
+
+
+
+</style>
+    <title>ShopZone</title>
 </head>
 <body>
+    <nav class="navbar md:navbar-expand bg-white shadow-sm px-4 shop-navbar sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ShopZone</a>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                <div class="drawer-body mb-2 md:mb-0">
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link category-btn" type="button" data-bs-toggle="menu" aria-expanded="false">
+                            Categories
+                            <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="menu">
+                            <a class="menu-item" href="#">Electronics</a>
+                            <a class="menu-item" href="#">Fashion</a>
+                            <hr class="menu-divider">
+                            <a class="menu-item" href="#">Home & Kitchen</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <h3>PAPER KIT 2 PRO</h3>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="hstack gap-2" role="search">
+                        <input class="form-control" type="search"
+                            placeholder="Search products..." aria-label="Search"/>
+                        <button class="search-btn" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-heart"></i>
+                        </a>
 
-        <div class="nav-links">
-            <a href="#">DOCUMENTATION</a>
-            <a href="#">COMPONENTS</a>
-            <a href="#">SECTIONS</a>
-            <a href="#">EXAMPLES</a>
-            <a href="#" class="buy-btn">🛒 BUY NOW</a>
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-person"></i>
+                        </a>
+
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-cart3"></i>
+                        </a>
+                    </div>
+                </div>
+            </dialog>
         </div>
     </nav>
+    <div id="carouselExampleContent"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="4500"
+     data-bs-pause="false">
+        <div class="carousel-inner rounded-5">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row align-items-center hero-section hero-banner">
 
-    <!-- Registration Form -->
-    <main class="form-container">
-        <h1>Create Your Account</h1>
-        <p class="subtitle">Join us and get started today</p>
+                        <div class="col-lg-6">
+                            <p class="text-primary fw-bold">NEW COLLECTION</p>
 
-        <form>
-            <label for="fullname">Full Name</label>
-            <input type="text" id="fullname"
-                   placeholder="Enter your full name" required>
+                            <h1>Upgrade Your Lifestyle</h1>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email"
-                   placeholder="Enter your email" required>
+                            <p>
+                                Discover the latest trends in fashion, electronics, and
+                                home essentials. Quality you love, prices you enjoy.
+                            </p>
 
-            <label for="password">Password</label>
-            <input type="password" id="password"
-                   placeholder="Create a password" required>
+                            <a href="#" class="btn btn-primary me-2 hero-btn">
+                                Shop Now
+                            </a>
 
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password"
-                   placeholder="Confirm your password" required>
+                            <a href="#" class="btn btn-outline-primary hero-btn">
+                                Explore Deals
+                            </a>
+                        </div>
 
-            <label>Gender</label>
-            <div class="gender-options">
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-                <label><input type="radio" name="gender" value="other"> Other</label>
+                        <div class="col-lg-6">
+                            <img src="./assests/shop-banner.png" alt="ShopZone Fashion Collection"  class="img-fluid rounded-4">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Electronics Collection -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row align-items-center hero-section hero-banner">
+
+                        <!-- Left Side Content -->
+                        <div class="col-lg-6">
+                            <p class="text-primary fw-bold">
+                                LATEST TECHNOLOGY
+                            </p>
+
+                            <h1>Upgrade Your Tech Lifestyle</h1>
+
+                            <p>
+                                Discover the latest gadgets and smart electronics.
+                                Explore smartphones, laptops, headphones and more
+                                at exciting prices.
+                            </p>
+
+                            <a href="#" class="btn btn-primary me-2 hero-btn">
+                                Shop Electronics
+                            </a>
+
+                            <a href="#" class="btn btn-outline-primary hero-btn">
+                                Explore Deals
+                            </a>
+                        </div>
+
+                        <!-- Right Side Image -->
+                        <div class="col-lg-6">
+                            <img src="./assests/Showcase Collection.png"
+                                alt="Electronics Collection"
+                                class="img-fluid rounded-4">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3: Home & Kitchen Collection -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row align-items-center hero-section hero-banner">
+
+                        <!-- Left Side Content -->
+                        <div class="col-lg-6">
+                            <p class="text-primary fw-bold">
+                                HOME ESSENTIALS
+                            </p>
+
+                            <h1>Make Your Home Beautiful</h1>
+
+                            <p>
+                                Discover stylish home decor and useful kitchen
+                                essentials. Bring comfort, beauty and convenience
+                                to your everyday lifestyle.
+                            </p>
+
+                            <a href="#" class="btn btn-primary me-2 hero-btn">
+                                Shop Home
+                            </a>
+
+                            <a href="#" class="btn btn-outline-primary hero-btn">
+                                Explore Collection
+                            </a>
+                        </div>
+
+                        <!-- Right Side Image -->
+                        <div class="col-lg-6">
+                            <img src="./assests/banner-kitchen.png"
+                                alt="Home and Kitchen Collection"
+                                class="img-fluid rounded-4">
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" required>
+        </div>
+        <div class="d-flex justify-content-center gap-2">
+            <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleContent" data-bs-slide="prev" style="--bs-carousel-control-icon-width: 1rem;">
+                <span class="carousel-icon-prev" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleContent" data-bs-slide="next" style="--bs-carousel-control-icon-width: 1rem;">
+                <span class="carousel-icon-next" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <section class="services-section">
+        <div class="container">
+            <div class="row g-4">
 
-            <label for="country">Country</label>
-            <select id="country" required>
-                <option value="">Select your country</option>
-                <option value="India">India</option>
-                <option value="USA">United States</option>
-                <option value="UK">United Kingdom</option>
-                <option value="Australia">Australia</option>
-            </select>
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <i class="bi bi-truck"></i>
+                        <h5>Free Shipping</h5>
+                        <p>On orders above ₹999</p>
+                    </div>
+                </div>
 
-            <label class="terms">
-                <input type="checkbox" required>
-                <span>
-                    I agree to the
-                    <a href="#">Terms of Service</a> and
-                    <a href="#">Privacy Policy</a>
-                </span>
-            </label>
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <i class="bi bi-shield-check"></i>
+                        <h5>Secure Payment</h5>
+                        <p>100% secure transactions</p>
+                    </div>
+                </div>
 
-            <button type="submit">REGISTER NOW</button>
-        </form>
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <i class="bi bi-award"></i>
+                        <h5>Best Quality</h5>
+                        <p>Premium quality products</p>
+                    </div>
+                </div>
 
-        <p class="login">
-            Already have an account? <a href="#">LOGIN</a>
-        </p>
-    </main>
+                <div class="col-md-3">
+                    <div class="service-card">
+                        <i class="bi bi-headset"></i>
+                        <h5>24/7 Support</h5>
+                        <p>We're here to help</p>
+                    </div>
+                </div>
 
-    <!-- Footer -->
-    <footer>
-        © 2019, MADE WITH ❤️ BY CREATIVE TIM
+            </div>
+        </div>
+    </section>
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="text-center">Shop by Category</h2>
+            <p class="text-center">
+                Explore our wide range of product categories
+            </p>
+            <div class="row g-4 mt-3">
+
+                <div class="col-md-3">
+                    <div class="category-card">
+                        <img src="./assests/Electronics.png" alt="Electronics">
+                        <h5>Electronics</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="category-card">
+                        <img src="./assests/Fashion.png" alt="Fashion">
+                        <h5>Fashion</h5>
+                    
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a href="kitchen.html"  class="kitchen-link">
+                        <div class="category-card">
+                            <img src="./assests/Kitchen.png" alt="Home and Kitchen">
+                            <h5>Home & Kitchen</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="category-card">
+                        <img src="./assests/Beauty .png" alt="Beauty">
+                        <h5>Beauty</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+
+    <section class="featured-section">
+        <div class="container">
+
+            <div class="featured-heading">
+                <div>
+                    <h2>Featured Products</h2>
+                    <p>Discover our handpicked products just for you</p>
+                </div>
+
+                <a href="#" class="view-all-btn">
+                    View All <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Product 1 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="featured-card">
+
+                        <div class="featured-image">
+                            <span class="product-badge">Best Seller</span>
+                            <button class="wishlist-icon">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+                                alt="Running Shoes">
+                        </div>
+
+                        <div class="featured-details">
+                            <p class="product-category">Fashion</p>
+                            <h5>Stylish Running Shoes</h5>
+                            <div class="product-rating">
+                                ★★★★★ <span>(4.8)</span>
+                            </div>
+                            <div class="product-price">
+                                ₹1,499 <del>₹1,999</del>
+                            </div>
+                            <button class="featured-cart-btn">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="featured-card">
+
+                        <div class="featured-image">
+                            <span class="product-badge">20% OFF</span>
+                            <button class="wishlist-icon">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
+                                alt="Wireless Headphones">
+                        </div>
+
+                        <div class="featured-details">
+                            <p class="product-category">Electronics</p>
+                            <h5>Wireless Headphones</h5>
+                            <div class="product-rating">
+                                ★★★★★ <span>(4.6)</span>
+                            </div>
+                            <div class="product-price">
+                                ₹1,999 <del>₹2,499</del>
+                            </div>
+                            <button class="featured-cart-btn">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="featured-card">
+
+                        <div class="featured-image">
+                            <span class="product-badge">Popular</span>
+                            <button class="wishlist-icon">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600"
+                                alt="Women's Fashion Heels">
+                        </div>
+
+                        <div class="featured-details">
+                            <p class="product-category">Fashion</p>
+                            <h5>Elegant Women's Heels</h5>
+                            <div class="product-rating">
+                                ★★★★☆ <span>(4.3)</span>
+                            </div>
+                            <div class="product-price">
+                                ₹999 <del>₹1,299</del>
+                            </div>
+                            <button class="featured-cart-btn">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="featured-card">
+
+                        <div class="featured-image">
+                            <span class="product-badge">New Arrival</span>
+                            <button class="wishlist-icon">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?w=600"
+                                alt="Home Decor">
+                        </div>
+
+                        <div class="featured-details">
+                            <p class="product-category">Home & Kitchen</p>
+                            <h5>Modern Home Decor</h5>
+                            <div class="product-rating">
+                                ★★★★★ <span>(4.7)</span>
+                            </div>
+                            <div class="product-price">
+                                ₹799 <del>₹999</del>
+                            </div>
+                            <button class="featured-cart-btn">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="shop-footer">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Brand Information -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-brand">SHOPZONE</h3>
+                    <p class="footer-text">
+                        Your one-stop destination for fashion,
+                        electronics and home essentials.
+                        Quality products at amazing prices.
+                    </p>
+
+                    <h6 class="footer-title mt-4">Follow Us</h6>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Customer Service</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return & Refund</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">Subscribe to Our Newsletter</h5>
+                    <p class="footer-text">
+                        Get updates about new arrivals and special offers.
+                    </p>
+
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email"
+                            aria-label="Email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-3">
+
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="footer-text mb-0">
+                            © 2026 SHOPZONE. All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end">
+                        <span class="footer-text">We Accept:</span>
+                        <div class="payment-methods d-inline-block">
+                            <span>VISA</span>
+                            <span>Mastercard</span>
+                            <span>UPI</span>
+                            <span>COD</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </footer>
 
-</body>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+  
+
 </html>
